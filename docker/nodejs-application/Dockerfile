@@ -1,7 +1,13 @@
-FROM node:10-alpine
+FROM node:15.14.0-alpine3.10
 
-COPY server.js /server.js
+RUN mkdir ./home/application/
 
-RUN npm install -g redis
+COPY server.js /home/application/
 
-CMD node /server.js
+WORKDIR ./home/application/
+
+#RUN npm install -g redis
+
+EXPOSE 8081
+
+CMD [ "node", "server.js" ]
