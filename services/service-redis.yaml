@@ -1,19 +1,18 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: service-node-pod
+  name: service-redis-pod
   labels:
     env: production
-    name: service-node
+    name: service-redis
     app: demo-node-app
 spec:
   type: ClusterIP
   ports:
-    - port: 80
-      targetPort: 80
+    - port: 6379
+      targetPort: 6379
       protocol: TCP
   selector:
     env: production
-    name: nginx-pod
-    app: demo-node-app   
-  
+    name: redis-pod
+    app: demo-node-app
