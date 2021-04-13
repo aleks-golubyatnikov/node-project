@@ -5,7 +5,7 @@ const port = 8081;
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World from NodeJs: '+'server running at http://${HOSTNAME}/');
+  res.end('Hello from NodeJs, server is running...');
 });
 
 server.listen(port, () => {
