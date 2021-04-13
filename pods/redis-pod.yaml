@@ -10,7 +10,6 @@ spec:
   containers:
     - name: redis
       image: redis
-      command:
-        - "redis-server --requirepass 1Qaz2Wsx"
+      command: ['redis-server', '--requirepass', '1Qaz2Wsx']
       ports:
         - containerPort: 6379   
