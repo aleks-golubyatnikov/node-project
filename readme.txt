@@ -1,0 +1,1 @@
+Test application (nodeJS, Redis)
