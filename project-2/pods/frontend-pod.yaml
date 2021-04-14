@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: frontend-pod
+  labels:
+    env: production
+    name: frontend-pod
+    app: demo-node-app-1
+spec:
+  containers:
+    - name: frontend
+      image: alexgolubyatnikov/node-application-1 

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nodejs-pod
+  labels:
+    env: production
+    name: nodejs-pod
+    app: demo-node-app
+spec:
+  containers:
+    - name: nodejs
+      image: alexgolubyatnikov/node-application
+      ports:
+        - containerPort: 8080
