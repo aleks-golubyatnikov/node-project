@@ -1,13 +1,14 @@
 const http = require('http');
+const os = require("os");
 
-const port = 8081;
+const port = 80;
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello from NodeJs, server is running...');
+  res.end('Hello from \'node.js\', server is running on ['+os.hostname().toLowerCase()+']...');
 });
 
 server.listen(port, () => {
-  console.log('Server running at http://${HOSTNAME}/');
+  console.log('Server running at '+os.hostname().toLowerCase()+'');
 });
