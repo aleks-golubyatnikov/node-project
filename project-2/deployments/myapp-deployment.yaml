@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-deployment-project-1
+  labels:
+    env: production
+    app: myapp-project-1
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      env: production
+      name: frontend-pod
+      app: myapp-project-1
+  template:
+    metadata:
+      name: frontend-pod
+      labels:
+        env: production
+        name: frontend-pod
+        app: myapp-project-1
+    spec:
+      containers:
+        - name: frontend-container
+          image: alexgolubyatnikov/node-application-1 

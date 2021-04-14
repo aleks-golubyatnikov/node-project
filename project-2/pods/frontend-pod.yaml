@@ -5,7 +5,7 @@ metadata:
   labels:
     env: production
     name: frontend-pod
-    app: demo-node-app-1
+    app: myapp-project-1
 spec:
   containers:
     - name: frontend
