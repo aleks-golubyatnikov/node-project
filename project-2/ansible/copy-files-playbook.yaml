@@ -1,0 +1,8 @@
+- 
+  name: copy files
+  hosts: all
+  task:
+     - name: Copy files to server
+       copy:
+         src: ./files/*.js
+         dest: /home/golubyatnikov/init-server/
