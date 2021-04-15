@@ -22,4 +22,4 @@ spec:
     spec:
       containers:
         - name: frontend-container
-          image: alexgolubyatnikov/node-application-1 
+          image: alexgolubyatnikov/node-application-1
